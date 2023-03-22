@@ -44,7 +44,9 @@ class _BallState extends State<Ball> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: TextButton(
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
+     child: TextButton(
         onPressed: () {
           setState(() {
             randomize();
@@ -52,6 +54,7 @@ class _BallState extends State<Ball> {
           print('ballNumber: $ballNumber');
         },
         child: Image.asset('images/ball$ballNumber.png',),
+      ),
       ),
     );
   }
